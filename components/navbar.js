@@ -3,7 +3,9 @@ import {Link} from "react-scroll";
 import ThemeChanger from "./DarkSwitch";
 import Image from "next/image"
 import { Disclosure } from "@headlessui/react";
- const navigation = [
+ 
+const Navbar = () => {
+  const navigation = [
     {
       id: 1,
       title: "Home",
@@ -27,12 +29,11 @@ import { Disclosure } from "@headlessui/react";
     
   ];
 
-const Navbar = () => {
 
   return (
     <div className="w-screen relative ">
       <nav className="container bg-black z-10 flex flex-wrap items-center justify-between p-4 mx-auto lg:justify-between fixed top-0 left-0 right-0">
-        {/* Logo  */}
+       
         <Disclosure>
           {({ open }) => (
             <>
@@ -77,23 +78,11 @@ const Navbar = () => {
 
                 <Disclosure.Panel className="flex flex-wrap w-full my-5 lg:hidden">
                   <>
-                  <ul>
-                  <li>
-              <Link to="/" smooth={true} offset={50} duration={500} className="ml-10 text-sm uppercase hover:border-b" >
-                  Home
-                  </Link>
-            </li>
-            <li>
-              <Link to="about" smooth={true} offset={50} duration={500}  className="ml-10 text-sm uppercase hover:border-b" >
-                  About
-                  </Link>
-            </li>
-                  </ul>
-                    {/* {navigation.map((item, index) => (
-                      <Link key={index} href={item.link} className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-indigo-500 focus:outline-none">
+                    {navigation.map((item, index) => (
+                      <Link key={index} href="/" className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-indigo-500 focus:outline-none">
                           {item.title}
                       </Link>
-                    ))} */}
+                    ))}
                     <Link href="/" className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5">         
                         Get Started
                     </Link>
@@ -107,34 +96,14 @@ const Navbar = () => {
         {/* menu  */}
         <div className="hidden text-center lg:flex lg:items-center">
           <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
-            <li>
-              <Link href="/" smooth={true} offset={-100} duration={500}  className="ml-10 text-sm uppercase hover:border-b" >
-                  Home
-                  </Link>
-            </li>
-            <li>
-              <Link  href="/about" smooth={true} offset={-100} duration={500} className="ml-10 text-sm uppercase hover:border-b" >
-                  About
-                  </Link>
-            </li>
-            <li>
-              <Link  href="/service" smooth={true} offset={50} duration={500} className="ml-10 text-sm uppercase hover:border-b" >
-                  Service
-                  </Link>
-            </li>
-            <li>
-              <Link  href="/contact" smooth={true} offset={50} duration={500}  className="ml-10 text-sm uppercase hover:border-b" >
-                  Contact
-                  </Link>
-            </li>
-         
-            {/* {navigation.map((menu, index) => (
+          
+            {navigation.map((menu, index) => (
               <li className="mr-3 nav__item" key={index}>
                 <Link href={menu.link} className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-indigo-500">
                     {menu.title}
                 </Link>
               </li>
-            ))} */}
+            ))}
           </ul>
         </div>
 
