@@ -79,13 +79,13 @@ const Navbar = () => {
                 <Disclosure.Panel className="flex flex-wrap w-full my-5 lg:hidden">
                   <>
                     {navigation.map((item, index) => (
-                      <Link key={index} href="/" className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-indigo-500 focus:outline-none">
+                      <Link key={index} href="/" className="w-full px-4 py-2 -ml-4  rounded-md text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-500 focus:outline-none">
                           {item.title}
                       </Link>
                     ))}
-                    <Link href="/" className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5">         
+                    {/* <Link href="/" className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5">         
                         Get Started
-                    </Link>
+                    </Link> */}
                   </>
                 </Disclosure.Panel>
               </div>
@@ -99,7 +99,7 @@ const Navbar = () => {
           
             {navigation.map((menu, index) => (
               <li className="mr-3 nav__item" key={index}>
-                <Link href={menu.link} className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-indigo-500">
+                <Link href={menu.link} className="inline-block px-4 py-2 text-lg font-normal text-white no-underline rounded-md hover:text-indigo-500 focus:text-white focus:outline-none focus:bg-indigo-500">
                     {menu.title}
                 </Link>
               </li>
@@ -108,9 +108,9 @@ const Navbar = () => {
         </div>
 
         <div className="hidden mr-3 space-x-4 lg:flex nav__item">
-          <Link href="/" className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5">
+          {/* <Link href="/" className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5">
               Get Started
-          </Link>
+          </Link> */}
 
           {/* <ThemeChanger /> */}
         </div>

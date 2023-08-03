@@ -24,13 +24,13 @@ const Home = () => {
 
       <Navbar />
       <Hero />
-        {/* <SectionTitle
+        <SectionTitle
           pretitle=" About WeldMetrix"
           title="Learn how to fullfil your needs">
           WeldMetrix is a cutting-edge weld datalogger designed to revolutionize the welding industry. 
           With its advanced technology and seamless integration, it enables welders to accurately log 
           and analyze crucial welding parameters, ensuring optimal weld quality.
-          </SectionTitle> */}
+          </SectionTitle>
         <Video />
         <SectionTitle>
         Capture amperage, voltage, wire feed speed, weld speed, temperature, and more with precision.

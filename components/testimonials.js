@@ -12,7 +12,7 @@ const Testimonials  = () => {
     <Container>
       <div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-3">
         <div className="lg:col-span-2 xl:col-auto">
-          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
+          <div className="flex flex-col justify-between w-full h-full px-14 rounded-2xl py-14 bg-trueGray-800">
             <p className="text-2xl leading-normal ">
             "WeldMetrix has transformed our welding process. The data logging capabilities are top-notch,
              and the reports generated provide invaluable insights. Highly recommended!"
@@ -25,7 +25,7 @@ const Testimonials  = () => {
           </div>
         </div>
         <div className="">
-          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
+          <div className="flex flex-col justify-between w-full h-full px-14 rounded-2xl py-14 bg-trueGray-800">
             <p className="text-2xl leading-normal ">
             "WeldMetrix has transformed our welding process. The data logging capabilities are top-notch,
              and the reports generated provide invaluable insights. Highly recommended!"
@@ -39,7 +39,7 @@ const Testimonials  = () => {
           </div>
         </div>
         <div className="">
-          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
+          <div className="flex flex-col justify-between w-full h-full px-14 rounded-2xl py-14 bg-trueGray-800">
             <p className="text-2xl leading-normal ">
             "WeldMetrix has transformed our welding process. The data logging capabilities are top-notch,
              and the reports generated provide invaluable insights. Highly recommended!"
@@ -72,7 +72,7 @@ function Avatar(props) {
       </div>
       <div>
         <div className="text-lg font-medium">{props.name}</div>
-        <div className="text-gray-600 dark:text-gray-400">{props.title}</div>
+        <div className="text-gray-400">{props.title}</div>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <Disclosure.Panel className=" flex flex-col  overflow-hidden left-0 h-full w-full sm:w-[350px] min-h-[250px] sm:h-[600px] border border-gray-300 dark:border-gray-800 bg-white shadow-2xl rounded-md sm:max-h-[calc(100vh-120px)]">
+    <Disclosure.Panel className=" flex flex-col  overflow-hidden left-0 h-full w-full sm:w-[350px] min-h-[250px] sm:h-[600px] border:border-gray-800 bg-white shadow-2xl rounded-md sm:max-h-[calc(100vh-120px)]">
     <div className="flex flex-col items-center justify-center h-32 p-5 bg-indigo-600">
       <h3 className="text-lg text-white">How can we help?</h3>
       <p className="text-white opacity-50">
@@ -47,7 +47,7 @@ const Contact = () => {
                 required: "Full name is required",
                 maxLength: 80,
               })}
-              className={`w-full px-3 py-2 text-gray-600 placeholder-gray-300 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring   ${
+              className={`w-full px-3 py-2 text-gray-600 placeholder-gray-300 bg-white border border-gray-800 rounded-md focus:outline-none focus:ring   ${
                 errors.name
                   ? "border-red-600 focus:border-red-600 ring-red-100"
                   : "border-gray-300 focus:border-indigo-600 ring-indigo-100"
