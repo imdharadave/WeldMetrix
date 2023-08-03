@@ -39,7 +39,7 @@ const Navbar = () => {
             <>
               <div className="flex flex-wrap items-center justify-between w-full lg:w-auto">
                 <Link href="/">
-                  <span className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100">
+                  <span className="flex items-center space-x-2 text-2xl font-medium text-gray-100">
                     <span>
                       <Image
                         src="/img/alphabet-icon.svg"
@@ -79,7 +79,7 @@ const Navbar = () => {
                 <Disclosure.Panel className="flex flex-wrap w-full my-5 lg:hidden">
                   <>
                     {navigation.map((item, index) => (
-                      <Link key={index} href="/" className="w-full px-4 py-2 -ml-4  rounded-md text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-500 focus:outline-none">
+                      <Link key={index} href="/" className="w-full px-4 py-2 -ml-4  rounded-md text-gray-300 hover:text-indigo-500 focus:text-white focus:bg-indigo-500 focus:outline-none">
                           {item.title}
                       </Link>
                     ))}
