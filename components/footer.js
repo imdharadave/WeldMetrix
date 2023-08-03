@@ -53,7 +53,7 @@ export default function Footer() {
           <div>
             <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
               {navigation.map((item, index) => (
-                <Link key={index} href="/" className="w-full px-4 py-2 rounded-md text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:outline-none focus:bg-indigo-500">                 
+                <Link key={index} href="/" className="w-full px-4 py-2 rounded-md text-gray-300 hover:text-indigo-500 focus:text-white focus:outline-none focus:bg-indigo-500">                 
                     {item}
                 </Link>
               ))}
