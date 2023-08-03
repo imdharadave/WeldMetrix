@@ -4,7 +4,7 @@ import weldImg from "../public/img/Welding.png";
 
 const Hero = () => {
   return (
-    <div className="bg-black pt-24">
+    <div className="bg-black pt-24"id="/">
       <Container className="flex flex-wrap">
         <div className="flex items-center w-full lg:w-1/2">
           <div className="max-w-2xl mb-8">

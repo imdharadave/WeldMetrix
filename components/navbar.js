@@ -3,7 +3,7 @@ import {Link} from "react-scroll";
 import ThemeChanger from "./DarkSwitch";
 import Image from "next/image"
 import { Disclosure } from "@headlessui/react";
- 
+import { useRouter } from "next/router";
 const Navbar = () => {
   const navigation = [
     {
@@ -23,16 +23,16 @@ const Navbar = () => {
     },
     {
       id: 4,
-      title: "Contact",
-      link: "/contact",
+      title: "Testimonial",
+      link: "/testimonial",
     },
     
   ];
 
-  const [click, setClick] = useState(false)
-  const handleClick =() => setClick(!click)
-
-  const closeMenu =() => setClick(false)
+  const router = useRouter();
+  const handleClick =() =>{
+    router.push("/");
+  };
 
   return (
     <div className="w-screen relative ">
@@ -83,7 +83,7 @@ const Navbar = () => {
                 <Disclosure.Panel className="flex flex-wrap w-full my-5 lg:hidden">
                   <>
                     {navigation.map((item, index) => (
-                      <Link key={index} href={item.link} smooth={true} offset={-100} duration={500} onClick={closeMenu} className="w-full px-4 py-2 -ml-4  rounded-md text-gray-300 hover:text-indigo-500 focus:text-white focus:bg-indigo-500 focus:outline-none">
+                      <Link key={index} to={item.link} smooth={true} offset={-100} duration={500} onClick={handleClick} className="w-full px-4 py-2 -ml-4  rounded-md text-gray-300 hover:text-indigo-500 focus:text-white focus:bg-indigo-500 focus:outline-none">
                           {item.title}
                       </Link>
                     ))}
@@ -103,7 +103,7 @@ const Navbar = () => {
           
             {navigation.map((menu, index) => (
               <li className="mr-3 nav__item" key={index}>
-                <Link href={menu.link} smooth={true} offset={-100} duration={500} onClick={closeMenu} className="inline-block px-4 py-2 text-lg font-normal text-white no-underline rounded-md hover:text-indigo-500 focus:text-white focus:outline-none focus:bg-indigo-500">
+                <Link to={menu.link} smooth={true} offset={-100} duration={500} onClick={handleClick} className="inline-block px-4 py-2 text-lg font-normal text-white no-underline rounded-md hover:text-indigo-500 focus:text-white focus:outline-none focus:bg-indigo-500">
                     {menu.title}
                 </Link>
               </li>

@@ -1,16 +1,36 @@
-import Link from "next/link";
+import {Link} from "react-scroll";
 import Image from "next/image";
 import React from "react";
 import Container from "./container";
-
+import { useRouter } from "next/router";
 export default function Footer() {
   const navigation = [
-    "Home",
-    "About",
-    "Service",
-    "contact",
+    {
+      id: 1,
+      title: "Home",
+      link: "/",
+    },
+    {
+      id: 2,
+      title: "About",
+      link: "/video",
+    },
+    {
+      id: 3,
+      title: "Service",
+      link: "/service",
+    },
+    {
+      id: 4,
+      title: "Testimonial",
+      link: "/testimonial",
+    },
   ];
   const legal = [];
+  const router = useRouter();
+  const handleClick =() =>{
+    router.push("/");
+  };
   return (
     <div className="relative bg-black">
       <Container>
@@ -53,8 +73,8 @@ export default function Footer() {
           <div>
             <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
               {navigation.map((item, index) => (
-                <Link key={index} href="/" className="w-full px-4 py-2 rounded-md text-gray-300 hover:text-indigo-500 focus:text-white focus:outline-none focus:bg-indigo-500">                 
-                    {item}
+                <Link key={index} to={item.link} smooth={true} offset={-100} duration={500} onClick={handleClick} className="w-full px-4 py-2 rounded-md text-gray-300 hover:text-indigo-500 focus:text-white focus:outline-none focus:bg-indigo-500">                 
+                    {item.title}
                 </Link>
               ))}
             </div>
